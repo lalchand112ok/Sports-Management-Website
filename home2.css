@@ -1,0 +1,102 @@
+/* General styles for the body and main content */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Hero section styling */
+.hero-section {
+    background: url('stadium.jpg') no-repeat center center/cover; /* Full-screen background image */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Positioning for overlay */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+}
+
+.hero-section .overlay {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for text visibility */
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff; /* White text for contrast */
+}
+
+.hero-section h1 {
+    margin: 0;
+    font-size: 3em; /* Larger font size for the main heading */
+}
+
+.hero-section p {
+    font-size: 1.5em; /* Slightly larger font size for the paragraph */
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Features section styling */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.feature-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%; /* Adjust width as needed */
+    box-shadow: 0  2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.feature-card h3 {
+    margin-top: 0; /* Remove top margin for headings */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Positioning for footer */
+    bottom: 0;
+    width: 100%;
+}

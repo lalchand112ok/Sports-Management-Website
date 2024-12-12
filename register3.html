@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRISPO Registration</title>
+    <link rel="stylesheet" href="register3.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="sports.html">Sports</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Modal Form -->
+        <div id="registerModal" class="reg-container">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2>Registration Form</h2>
+                <form id="registrationForm" onsubmit="return handleFormSubmit(event)"> <!--action="register.php" method="POST"-->
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    
+                    <label for="university">University Name:</label>
+                    <input type="text" id="university" name="university" placeholder="Enter your university name" required>
+                    
+                    <label for="sport">Select Sport:</label>
+                    <select id="sport" name="sport" required>
+                        <option value="">--Select a Sport--</option>
+                        <option value="Football">Football</option>
+                        <option value="Basketball">Basketball</option>
+                        <option value="Volleyball">Volleyball</option>
+                        <option value="Cricket">Cricket</option>
+                        <option value="Kho-Kho">Kho-Kho</option>
+                        <option value="Hockey">Hockey</option>
+                    </select>
+
+                    <label for="category">Category:</label>
+                    <div class="category-options">
+                        <input type="radio" id="male" name="category" value="Men" required>
+                        <label for="male">Men</label>
+                        <input type="radio" id="female" name="category" value="Women" required>
+                        <label for="female">Women</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CRISPO | Christ University</p>
+    </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const sport = document.getElementById('sport').value;
+
+            // Redirect based on selected sport
+            if (sport) {
+                switch (sport) {
+                    case 'Football':
+                        window.location.href = 'football_player_details.html';
+                        break;
+                    case 'Basketball':
+                        window.location.href = 'basketball_player_details.html';
+                        break;
+                    case 'Volleyball':
+                        window.location.href = 'volleyball_player_details.html';
+                        break;
+                    case 'Cricket':
+                        window.location.href = 'cricket_player_details.html';
+                        break;
+                    case 'Kho-Kho':
+                        window.location.href = 'kho_kho_player_details.html';
+                        break;
+                    case 'Hockey':
+                        window.location.href = 'hockey_player_details.html';
+                        break;
+                    default:
+                        console.error('Invalid sport selected');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
